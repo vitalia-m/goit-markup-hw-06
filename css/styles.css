@@ -579,12 +579,9 @@ button {
   font-weight: 500;
   font-size: 36px;
   width: 100%;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
-.portfolio-repr:hover {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
+
 .img-anime {
   position: relative;
   overflow: hidden;
@@ -654,14 +651,21 @@ button {
   }
   .portfolio-repr {
     width: calc((100% - 72px) / 2);
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   }
 }
 @media screen and (min-width: 1158px) {
   .portfolio {
     margin: 120px 0 120px 0;
+    padding: 100px 0;
   }
   .portfolio-repr {
     max-width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .portfolio-repr:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   }
   .portfolio-list {
     column-gap: 24px;
@@ -671,31 +675,30 @@ button {
 /* footer  */
 .footer {
   background-color: #2e2f42;
-  font-weight: 400;
-  font-size: 16px;
   color: #f4f4fd;
   padding: 96px 0;
   margin-left: 0;
 }
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 72px;
+}
+
 .logo.footer-logo {
   display: inline-block;
   margin-bottom: 16px;
-  justify-content: center;
+
+  text-align: center;
 }
 .studio {
   color: #f4f4fd;
 }
+
 .footer-descr {
   line-height: 1.5;
   letter-spacing: 0.02em;
-  max-width: 288px;
   color: #f4f4fd;
-}
-.section {
-  padding-top: 120px;
-  padding-bottom: 120px;
-  padding-left: auto;
-  padding-right: auto;
 }
 .footer-social {
   width: 100%;
@@ -703,12 +706,10 @@ button {
 }
 .footer-social-text {
   font-weight: 500;
-  font-size: 16px;
   color: #fff;
   margin-bottom: 16px;
   letter-spacing: 0.02em;
 }
-
 .footer-social-list {
   display: flex;
   flex-wrap: wrap;
@@ -737,31 +738,17 @@ button {
 .footer-icons-circle:focus {
   background-color: #31d0aa;
 }
-.social-links {
-  display: block;
-}
-.logo-insta {
-  display: block;
-  margin: 0 auto;
-  width: 40px;
-  height: 40px;
+.footer-subscribe-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 .footer-subscribe-text {
   font-weight: 500;
-  font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.02em;
   color: #fff;
   margin-bottom: 16px;
-}
-.footer-subscribe-form {
-  display: flex;
-  gap: 24px;
-}
-.footer-subscribe-label {
-  border: 1px solid white;
-  border-radius: 4px;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 .footer-subscribe-input {
   border: 1px solid #fff;
@@ -807,22 +794,18 @@ button {
 @media screen and (min-width: 768px) {
   .footer .container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
-  .footer-descr {
-    max-width: 264px;
-  }
+
   .footer-web-box {
-    margin-right: 24px;
+    max-width: 264px;
   }
 }
 @media screen and (min-width: 1158px) {
-  .portfolio {
+  .footer {
     padding: 100px 0;
-  }
-  .footer-web-box {
-    margin-right: 120px;
-  }
-  .footer-subscribe {
-    margin-left: 80px;
+    margin-left: 0;
   }
 }

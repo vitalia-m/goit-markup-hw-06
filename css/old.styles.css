@@ -189,3 +189,40 @@
   letter-spacing: 0.04em;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  padding-left: auto;
+  padding-right: auto;
+}
+
+.social-links {
+  display: block;
+}
+.logo-insta {
+  display: block;
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer .container {
+    display: flex;
+  }
+  .footer-descr {
+    max-width: 264px;
+  }
+  .footer-web-box {
+    margin-right: 24px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .footer-web-box {
+    margin-right: 120px;
+  }
+  .footer-subscribe {
+    margin-left: 80px;
+  }
+}
